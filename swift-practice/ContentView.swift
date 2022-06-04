@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var toDoString = ""
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("스위프트를 갈아서 드셔보시겠습니까?")
+                .font(.title.bold())
+            HStack {
+                Image(systemName: "square.and.pencil")
+                TextField("your task", text: $toDoString)
+            }
+            .textFieldStyle(DefaultTextFieldStyle())
+            .frame(width: 300, height: 50, alignment: .center)
+        }
     }
 }
 
@@ -19,3 +29,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
