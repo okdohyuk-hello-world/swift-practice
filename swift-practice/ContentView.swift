@@ -8,20 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var toDoString = ""
-    
     //    Identifiable = 식별가능한 아이템?
     struct TodoList: Identifiable {
         let id = UUID()
         var title: String
         var content: String
+        var isChecked: Bool
     }
     
-    private var todoLists = [
-        TodoList(title: "스위프트를 배워봅시다", content: "리스트 내용"),
-        TodoList(title: "노래 듣기", content: "리스트 내용"),
-        TodoList(title: "다음엔 코틀린으로", content: "리스트 내용"),
-    ]
+    @State private var todoString = ""
+    @State private var todoLists = [TodoList]()
+    
+    func addNewTodo() {
+        let newTodo = TodoList(title: todoString, content: "", isChecked: false)
+        todoLists.append(newTodo)
+        todoString = ""
+    }
+    
+    func toggleTodoChecked(_ idx: Int) {
+        todoLists[idx].isChecked.toggle()
+    }
+    
+    func removeTodo(_ idx: Int) {
+        todoLists.remove(at: idx)
+    }
     
     var body: some View {
         VStack {
@@ -30,23 +40,25 @@ struct ContentView: View {
             
             HStack {
                 Image(systemName: "square.and.pencil")
-                TextField("your task", text: $toDoString)
+                TextField("your task", text: $todoString,  onCommit: {
+                    addNewTodo()
+                })
             }
             .textFieldStyle(DefaultTextFieldStyle())
             .frame(width: 300, height: 50, alignment: .center)
             
             List {
-                ForEach(0..<todoLists.count, id: \.self) { i in
+                ForEach(0..<todoLists.count, id: \.self) { idx in
                     HStack {
-                        Button(action: {}, label: {
-                            Image(systemName: "square")
+                        Button(action: {toggleTodoChecked(idx)}, label: {
+                            Image(systemName: todoLists[idx].isChecked ? "checkmark.square" : "square")
                         })
-                        Text(todoLists[i].title)
+                        Text(todoLists[idx].title)
                         Spacer()
-                        Button(action: {}, label: {
+                        Button(action: {removeTodo(idx)}, label: {
                             Image(systemName: "trash")
                         })
-                    }
+                    }.buttonStyle(BorderlessButtonStyle())
                     
                 }
             }
