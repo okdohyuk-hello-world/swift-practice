@@ -14,6 +14,11 @@
 		5183F63D284A834A009297FD /* swift_practiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5183F63C284A834A009297FD /* swift_practiceTests.swift */; };
 		5183F647284A834A009297FD /* swift_practiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5183F646284A834A009297FD /* swift_practiceUITests.swift */; };
 		5183F649284A834A009297FD /* swift_practiceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5183F648284A834A009297FD /* swift_practiceUITestsLaunchTests.swift */; };
+		5183F659284B5EA1009297FD /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5183F658284B5EA1009297FD /* HeaderView.swift */; };
+		5183F65B284B5F1E009297FD /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5183F65A284B5F1E009297FD /* TextFieldView.swift */; };
+		5183F65D284B605E009297FD /* objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5183F65C284B605E009297FD /* objects.swift */; };
+		5183F661284B63C9009297FD /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5183F660284B63C9009297FD /* TodoListView.swift */; };
+		5183F663284B65DA009297FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5183F662284B65DA009297FD /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		5183F646284A834A009297FD /* swift_practiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_practiceUITests.swift; sourceTree = "<group>"; };
 		5183F648284A834A009297FD /* swift_practiceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_practiceUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5183F655284A8E83009297FD /* swift-practice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "swift-practice.entitlements"; sourceTree = "<group>"; };
+		5183F658284B5EA1009297FD /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		5183F65A284B5F1E009297FD /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		5183F65C284B605E009297FD /* objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = objects.swift; sourceTree = "<group>"; };
+		5183F660284B63C9009297FD /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		5183F662284B65DA009297FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +85,7 @@
 		5183F61F284A8349009297FD = {
 			isa = PBXGroup;
 			children = (
+				5183F657284B5E28009297FD /* Components */,
 				5183F62A284A8349009297FD /* swift-practice */,
 				5183F63B284A834A009297FD /* swift-practiceTests */,
 				5183F645284A834A009297FD /* swift-practiceUITests */,
@@ -128,6 +139,18 @@
 				5183F648284A834A009297FD /* swift_practiceUITestsLaunchTests.swift */,
 			);
 			path = "swift-practiceUITests";
+			sourceTree = "<group>";
+		};
+		5183F657284B5E28009297FD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5183F658284B5EA1009297FD /* HeaderView.swift */,
+				5183F65A284B5F1E009297FD /* TextFieldView.swift */,
+				5183F65C284B605E009297FD /* objects.swift */,
+				5183F662284B65DA009297FD /* ContentView.swift */,
+				5183F660284B63C9009297FD /* TodoListView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		97E121CF115FB67105283DD8 /* Pods */ = {
@@ -289,7 +312,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5183F62E284A8349009297FD /* ContentView.swift in Sources */,
+				5183F659284B5EA1009297FD /* HeaderView.swift in Sources */,
+				5183F663284B65DA009297FD /* ContentView.swift in Sources */,
+				5183F661284B63C9009297FD /* TodoListView.swift in Sources */,
 				5183F62C284A8349009297FD /* swift_practiceApp.swift in Sources */,
+				5183F65D284B605E009297FD /* objects.swift in Sources */,
+				5183F65B284B5F1E009297FD /* TextFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
